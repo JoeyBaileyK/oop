@@ -1,26 +1,42 @@
-#pet class
-class pet:
-    foodLevel = 100
+class Pet:
+    """ This is the beginning of a class for the superior dog.
+            Attributes:
+            name
+            weight
+            
+"""
+    foodDishLevel = 100
+    
     def __init__(self, name):
         self.name = name
 
-    def __init__(self, weight):
+    def add_weight(self, weight):
         self.weight = weight
 
+    def eat(self):
+        Dog.foodDishLevel -= 10
 
-s = ('steve')
+class Dog(Pet):
+    """ Dog inherits from Pet"""
 
-b = ('bob')
+class Cat(Pet):
+    """ Cat inherits from Pet"""
 
-k = ('kevin')
+c = Dog('Fido')
 
-c = ('carl')
 
-s.add_weight(10)
-b.sub_weight(10)
+x = Cat('Fluffy')
 
-print(s.name)
-print(s.weight)
 
-print(s.name)
-print(s.weight)
+x.add_weight(12)
+
+
+print(c.name)
+
+print(x.name)
+print(x.weight)
+
+x.eat
+print(c.foodDishLevel)
+print(x.foodDishLevel)
+
